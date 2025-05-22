@@ -1,0 +1,174 @@
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #00405ce9, #00a788);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 5px solid #00ffcc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header img {
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* NAV */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Tombol toggle dark mode */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.2);
+    color: #ffd700;
+}
+
+/* SECTION KONTAK */
+#contact {
+    background-color: #f4faff;
+    padding: 20px;
+    border-top: 4px solid #00a788;
+    border-radius: 0 0 10px 10px;
+}
+
+#contact h2 {
+    color: #008080;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #00a788;
+    outline: none;
+}
+
+button {
+    background-color: #007a66;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #00cc99;
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(90deg, #005c5b, #00a7a4);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+/* AKSESIBILITAS */
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #00a788;
+    outline-offset: 4px;
+}
+
+/* RESPONSIF */
+@media (max-width: 768px) {
+    header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    nav table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    form input, form textarea {
+        width: 100%;
+    }
+}
+
+/* DARK MODE */
+body.dark {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark header,
+body.dark footer {
+    background: linear-gradient(90deg, #222222, #444);
+}
+
+body.dark nav a {
+    color: #f0f0f0;
+}
+
+body.dark nav a:hover,
+body.dark nav a:focus-visible {
+    color: #ffd700;
+}
+
+body.dark #contact {
+    background-color: #2a2a2a;
+}
+
+body.dark input,
+body.dark textarea {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+body.dark input:focus,
+body.dark textarea:focus {
+    border-color: #00cc99;
+}
+
+body.dark button {
+    background-color: #007a66;
+}
+
+body.dark button:hover {
+    background-color: #00cc99;
+}
+
+body.dark #theme-toggle {
+    color: #f0f0f0;
+}
+
+body.dark #theme-toggle:hover {
+    color: #ffd700;
+}

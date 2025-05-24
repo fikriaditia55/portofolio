@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
   <title>Portofolio Web Developer</title>
 </head>
 <body>
-  <header>
-    <h1>Nama Anda</h1>
-    <img src="image.png" width="200" height="200" alt="Foto Profil">
-
-    <!-- hasil akhir yang sudah kamu pilih -->
-<div>Ini kode yang saya pilih</div>
-
+  <header class="fade-in">
+    <h1>Fikri Aditia</h1>
+    <img src="image.png" width="200" height="200" alt="Foto Profil" />
 
     <nav>
       <table>
         <tr>
           <td><a href="#about">Tentang</a> |</td>
           <td><a href="#skills">Keahlian</a> |</td>
-          <td>
-            <button id="theme-toggle" aria-label="Ganti Tema"></button> |
-          </td>
           <td><a href="#projects">Proyek</a> |</td>
           <td><a href="#contact">Kontak</a> |</td>
           <td><a href="blog.html">Blog</a></td>
@@ -31,30 +24,28 @@
     </nav>
   </header>
 
-  <hr>
+  <hr />
 
-  <section id="about">
+  <section id="about" class="slide-in">
     <h2>Tentang Saya</h2>
     <p>Saya adalah seorang pengembang web dengan pengalaman dalam HTML, CSS, JavaScript, dan framework modern seperti React dan Laravel.</p>
   </section>
 
-  <hr>
+  <hr />
 
-  <section id="skills">
+  <section id="skills" class="slide-in">
     <h2>Keahlian</h2>
     <ul>
-      <li>HTML & CSS</li>
-      <li>JavaScript</li>
-      <li>React.js</li>
-      <li>Node.js</li>
-      <li>Laravel</li>
-      <li>Database MySQL</li>
+      <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="30" /> HTML5</li>
+      <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="30" /> CSS3</li>
+      <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="30" /> JavaScript</li>
+      <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="30" /> MySQL</li>
     </ul>
   </section>
 
-  <hr>
+  <hr />
 
-  <section id="projects">
+  <section id="projects" class="fade-in">
     <h2>Proyek Saya</h2>
     <article>
       <h3>Proyek 1</h3>
@@ -66,48 +57,50 @@
     </article>
   </section>
 
-  <hr>
+  <hr />
 
-  <section id="contact">
+  <section id="contact" class="slide-in">
     <h2>Kontak</h2>
-    <form>
-      <label for="name">Fikriaditia:</label>
-      <input type="text" id="name" required><br><br>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" required><br><br>
-
-      <label for="message">Pesan:</label><br>
-      <textarea id="message" rows="4" required></textarea><br><br>
-
-      <button type="submit">Kirim</button>
-    </form>
+    <div class="form-container">
+      <form>
+        <label for="name">Fikriaditia:</label>
+        <input type="text" id="name" required /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" required /><br /><br />
+        <label for="message">Pesan:</label><br />
+        <textarea id="message" rows="4" required></textarea><br /><br />
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
   </section>
 
-  <hr>
+  <hr />
 
   <footer>
     <p>&copy; 2025 Nama Fikriaditia. Semua Hak Dilindungi.</p>
+    <div class="social-media">
+      <a href="https://wa.me/6282340570569" target="_blank"><img src="wa.png" alt="WhatsApp" /></a>
+      <a href="https://instagram.com/abang_fik3" target="_blank"><img src="ig.png" alt="Instagram" /></a>
+      <a href="https://tiktok.com/@abanggfik" target="_blank"><img src="tiktok.png" alt="TikTok" /></a>
+      <a href="https://www.facebook.com/FikriAditia" target="_blank"><img src="fb.png" alt="Facebook" /></a>
+    </div>
   </footer>
 
-  <!-- Script Toggle Tema -->
   <script>
-    const toggleBtn = document.getElementById('theme-toggle');
+    const toggleBtn = document.getElementById("theme-toggle");
     const body = document.body;
-
-    if (localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark');
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark");
     }
-
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark');
-      if (body.classList.contains('dark')) {
-        localStorage.setItem('theme', 'dark');
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
       } else {
-        localStorage.removeItem('theme');
+        localStorage.removeItem("theme");
       }
     });
   </script>
-
+  
 </body>
 </html>
